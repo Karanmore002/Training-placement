@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training and Placement Portal</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#2563EB', secondary: '#93C5FD' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    :where([class^="ri-"])::before {
+      content: "\f3c2";
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F9FAFB;
+    }
+
+    input:focus,
+    button:focus {
+      outline: none;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header class="w-full bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <!-- <h1 class="text-2xl font-['Pacifico'] text-primary">logo</h1> -->
+         <img src="/Frontend/assets/logo-wide.png" class="h-16 mx-auto mb-5">
+      </div>
+      <nav class="hidden md:flex items-center">
+        <a href="/index.html"
+          class="text-primary font-medium group relative px-3 py-2 text-lg hover:bg-blue-50 rounded-md transition-all">
+          Home
+          <span
+            class="absolute -bottom-2 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+        </a>
+        <a href="#"
+          class="text-gray-700 hover:text-primary group relative px-3 py-2 text-lg hover:bg-blue-50 rounded-md transition-all">
+          Jobs
+          <span
+            class="absolute -bottom-2 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+        </a>
+        <a href="#"
+          class="text-gray-700 hover:text-primary group relative px-3 py-2 text-lg hover:bg-blue-50 rounded-md transition-all">
+          Students
+          <span
+            class="absolute -bottom-2 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+        </a>
+        <a href="#"
+          class="text-gray-700 hover:text-primary group relative px-3 py-2 text-lg hover:bg-blue-50 rounded-md transition-all">
+          Recruiters
+          <span
+            class="absolute -bottom-2 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+        </a>
+      </nav>
+      <div class="flex items-center">
+        <button
+          class="bg-primary text-white px-6 py-2.5 !rounded-button font-medium hover:bg-blue-600 transition-all transform hover:scale-105 text-lg whitespace-nowrap">Admin
+          Login</button>
+      </div>
+      <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+        <i class="ri-menu-line ri-lg"></i>
+      </button>
+    </div>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="pt-24 pb-16 md:pt-32 md:pb-24 relative overflow-hidden"
+    style="background-image: url('https://readdy.ai/api/search-image?query=professional%20office%20environment%20with%20soft%20blue%20gradient%2C%20blurred%20background%20for%20corporate%20website%2C%20minimalist%2C%20clean%2C%20modern%20workspace%20with%20subtle%20technology%20elements%2C%20perfect%20for%20text%20overlay%2C%20high%20quality%20professional%20photograph&width=1920&height=800&seq=1&orientation=landscape'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-primary/30"></div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Your Gateway to Career Success</h1>
+        <p class="text-lg md:text-xl text-white/90 mb-8">Connect with top employers, discover opportunities, and take
+          the next step in your professional journey with our comprehensive placement platform.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/Frontend/StudLogin.html">
+            <button
+              class="bg-white text-primary px-6 py-3 !rounded-button font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">Student
+              Login</button></a>
+          <a href="/Frontend/ComLogin.html">
+            <button
+              class="bg-primary text-white border border-white px-6 py-3 !rounded-button font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap">Company
+              Login</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+   <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Platform Statistics</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div class="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-4">
+            <i class="ri-briefcase-line ri-lg text-primary"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-800 mb-2 ">2,845</h3>
+          <p class="text-gray-600">Total Job Postings</p>
+        </div>
+        <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div class="w-14 h-14 flex items-center justify-center bg-green-100 rounded-full mb-4">
+            <i class="ri-user-star-line ri-lg text-green-600"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-800 mb-2">1,423</h3>
+          <p class="text-gray-600">Students Placed</p>
+        </div>
+        <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div class="w-14 h-14 flex items-center justify-center bg-amber-100 rounded-full mb-4">
+            <i class="ri-calendar-check-line ri-lg text-amber-600"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-800 mb-2">78</h3>
+          <p class="text-gray-600">Upcoming Interviews</p>
+        </div>
+        <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div class="w-14 h-14 flex items-center justify-center bg-purple-100 rounded-full mb-4">
+            <i class="ri-building-line ri-lg text-purple-600"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-800 mb-2">352</h3>
+          <p class="text-gray-600">Registered Companies</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center mb-10">
+        <h2 class="text-3xl font-bold text-gray-800">Latest Job Openings</h2>
+        <a href="#" class="text-primary font-medium hover:underline">View All</a>
+      </div>
+      <ul id="jobPostsList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+         Job cards will be injected here by index.js 
+      </ul>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Platform Statistics</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="statsContainer">
+         Stats will be loaded dynamically
+      </div>
+    </div>
+  </section> 
+
+  <!-- Featured Employers -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Featured Employers</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div class="flex flex-col items-center">
+          <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-3">
+            <i class="ri-microsoft-fill ri-2x text-primary"></i>
+          </div>
+          <p class="text-gray-700 font-medium">Microsoft</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-3">
+            <i class="ri-amazon-fill ri-2x text-orange-500"></i>
+          </div>
+          <p class="text-gray-700 font-medium">Amazon</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-3">
+            <i class="ri-google-fill ri-2x text-red-500"></i>
+          </div>
+          <p class="text-gray-700 font-medium">Google</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-3">
+            <i class="ri-apple-fill ri-2x text-gray-800"></i>
+          </div>
+          <p class="text-gray-700 font-medium">Apple</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-3">
+            <i class="ri-facebook-fill ri-2x text-blue-600"></i>
+          </div>
+          <p class="text-gray-700 font-medium">Meta</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-3">
+            <i class="ri-netflix-fill ri-2x text-red-600"></i>
+          </div>
+          <p class="text-gray-700 font-medium">Netflix</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Upcoming Events -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center mb-10">
+        <h2 class="text-3xl font-bold text-gray-800">Upcoming Events</h2>
+        <a href="#" class="text-primary font-medium hover:underline">View All</a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Event Card 1 -->
+        <div
+          class="bg-white rounded-md shadow-sm border border-gray-100 hover:shadow-md transition-shadow overflow-hidden">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="flex flex-col items-center justify-center bg-primary text-white rounded p-2 mr-4">
+                <span class="text-sm font-medium">APR</span>
+                <span class="text-xl font-bold">28</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800">Tech Career Fair 2025</h3>
+                <p class="text-gray-600">10:00 AM - 4:00 PM</p>
+              </div>
+            </div>
+            <div class="flex items-center text-gray-500 mb-4">
+              <i class="ri-map-pin-line mr-2"></i>
+              <span>University Main Campus, Building A</span>
+            </div>
+            <p class="text-gray-600 mb-6">Connect with 50+ tech companies looking to hire fresh graduates and
+              experienced professionals.</p>
+            <button
+              class="w-full bg-primary text-white py-2.5 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Register
+              Now</button>
+          </div>
+        </div>
+        <!-- Event Card 2 -->
+        <div
+          class="bg-white rounded-md shadow-sm border border-gray-100 hover:shadow-md transition-shadow overflow-hidden">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="flex flex-col items-center justify-center bg-primary text-white rounded p-2 mr-4">
+                <span class="text-sm font-medium">MAY</span>
+                <span class="text-xl font-bold">05</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800">Resume Building Workshop</h3>
+                <p class="text-gray-600">2:00 PM - 5:00 PM</p>
+              </div>
+            </div>
+            <div class="flex items-center text-gray-500 mb-4">
+              <i class="ri-map-pin-line mr-2"></i>
+              <span>Online (Zoom)</span>
+            </div>
+            <p class="text-gray-600 mb-6">Learn how to craft a compelling resume that stands out to recruiters and
+              passes ATS screening.</p>
+            <button
+              class="w-full bg-primary text-white py-2.5 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Register
+              Now</button>
+          </div>
+        </div>
+        <!-- Event Card 3 -->
+        <div
+          class="bg-white rounded-md shadow-sm border border-gray-100 hover:shadow-md transition-shadow overflow-hidden">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="flex flex-col items-center justify-center bg-primary text-white rounded p-2 mr-4">
+                <span class="text-sm font-medium">MAY</span>
+                <span class="text-xl font-bold">12</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800">Interview Preparation Session</h3>
+                <p class="text-gray-600">1:00 PM - 3:30 PM</p>
+              </div>
+            </div>
+            <div class="flex items-center text-gray-500 mb-4">
+              <i class="ri-map-pin-line mr-2"></i>
+              <span>Career Development Center, Room 302</span>
+            </div>
+            <p class="text-gray-600 mb-6">Mock interviews, common questions, and tips to help you ace your next job
+              interview.</p>
+            <button
+              class="w-full bg-primary text-white py-2.5 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Register
+              Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div>
+          <img src="./Frontend/assets/logo-wide.png" class="h-16 mx-auto mb-5">
+          <p class="text-gray-400 mb-6">Connecting talented students with the right opportunities since 2025.</p>
+          <div class="flex space-x-4">
+            <a href="#"
+              class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+              <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+              <i class="ri-linkedin-fill"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+              <i class="ri-instagram-fill"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Jobs</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">For Students</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Register</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Login</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Find Jobs</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Career Resources</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Resume Builder</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Interview Tips</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">For Employers</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Register Company</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Post a Job</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Browse Candidates</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Recruitment Services</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 mb-4 md:mb-0">© 2025 Training and Placement Portal. All rights reserved.</p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Mobile menu toggle
+      const menuButton = document.querySelector('.ri-menu-line').parentElement;
+      const nav = document.querySelector('nav');
+      menuButton.addEventListener('click', function () {
+        if (nav.classList.contains('hidden')) {
+          nav.classList.remove('hidden');
+          nav.classList.add('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'shadow-md', 'p-4', 'space-y-4', 'z-50');
+          menuButton.querySelector('i').classList.remove('ri-menu-line');
+          menuButton.querySelector('i').classList.add('ri-close-line');
+        } else {
+          nav.classList.add('hidden');
+          nav.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'shadow-md', 'p-4', 'space-y-4', 'z-50');
+          menuButton.querySelector('i').classList.add('ri-menu-line');
+          menuButton.querySelector('i').classList.remove('ri-close-line');
+        }
+      });
+      // Add hover effect for navigation items in mobile view
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        link.addEventListener('mouseenter', function () {
+          this.classList.add('text-primary');
+          const underline = this.querySelector('span');
+          if (underline) {
+            underline.classList.remove('scale-x-0');
+            underline.classList.add('scale-x-100');
+          }
+        });
+        link.addEventListener('mouseleave', function () {
+          if (!this.classList.contains('text-primary')) {
+            this.classList.remove('text-primary');
+          }
+          const underline = this.querySelector('span');
+          if (underline && !this.classList.contains('text-primary')) {
+            underline.classList.add('scale-x-0');
+            underline.classList.remove('scale-x-100');
+          }
+        });
+      });
+    });
+  </script>
+  <script src="/Frontend/JavaScript/index.js"></script>
+</body>
+</html>
